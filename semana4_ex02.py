@@ -82,9 +82,36 @@ for user in users:
     user["sex"] = []
     user["age"] = []
 
-print (users)
+#print (users)
 
    
+#exercicio 02
+dic = {} 
+sex = []
+friends = []
+totalM=0
+totalF=0
+for user in users: 
+    dic["friendsM"] = []
+    dic["friendsF"] = []
+    dic["id"] = []
+    id = user["id"]
+    if id %2 ==0 : 
+        user["sex"]= "M"
+        totalM  += 1 
+        dic["friendsM"] = user["sex"]
+    else:
+        user["sex"] = "F"     
+        dic["friendsF"] = user["sex"]
+        totalF  += 1 
+     
+dic["id"] = id
+
+dic[friends][0] = totalM
+dic[friends][1] = totalF
+
+print (str(dic))
+
 
 
 
